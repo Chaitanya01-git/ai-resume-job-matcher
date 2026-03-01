@@ -180,24 +180,19 @@ with col1:
     st.markdown('<div class="section-title">Candidate Information</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="input-label">Full Name</div>', unsafe_allow_html=True)
-    name = st.text_input("", key="full_name", label_visibility="collapsed")
+    name = st.text_input("Full Name", key="full_name", label_visibility="collapsed")
 
     st.markdown('<div class="input-label">Email Address</div>', unsafe_allow_html=True)
-    email = st.text_input("", key="email_address", label_visibility="collapsed")
+    email = st.text_input("Email Address", key="email_address", label_visibility="collapsed")
 
 with col2:
     st.markdown('<div class="section-title">Resume Upload</div>', unsafe_allow_html=True)
 
     st.markdown('<div class="input-label">Upload PDF Resume</div>', unsafe_allow_html=True)
-    file = st.file_uploader("", type="pdf", key="resume_upload", label_visibility="collapsed")
+    file = st.file_uploader("Upload Resume", type="pdf", key="resume_upload", label_visibility="collapsed")
 
 st.markdown('<div class="section-title">Job Description</div>', unsafe_allow_html=True)
-job_description = st.text_area(
-    "Job Description",
-    key="job_desc",
-    placeholder="Paste job description here...",
-    label_visibility="collapsed"
-)
+job_description = st.text_area("Job Description", key="job_desc", label_visibility="collapsed")
 analyze = st.button("Analyze Resume")
 
 st.markdown("<hr>", unsafe_allow_html=True)
@@ -292,4 +287,5 @@ Job Description:
             unsafe_allow_html=True
 
         )
+
 
