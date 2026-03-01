@@ -2,6 +2,7 @@ import streamlit as st
 import pdfplumber
 import re
 from groq import Groq
+st.set_page_config(page_title="AI Resume Analyzer", layout="wide")
 
 client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
@@ -9,7 +10,6 @@ client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 # -----------------------------
 # PAGE CONFIG
 # -----------------------------
-st.set_page_config(page_title="AI Resume Analyzer", layout="wide")
 
 # -----------------------------
 # CLEAN PROFESSIONAL STYLING
@@ -287,5 +287,6 @@ Job Description:
             unsafe_allow_html=True
 
         )
+
 
 
